@@ -98,14 +98,14 @@ namespace CatalogApi
             }
             app.UseCors();
             app.UseSwagger();
-            if (env.IsDevelopment())
+            //if (env.IsDevelopment())
             {
                 app.UseSwaggerUI(config => //swaggerui for testing
                 {
                     config.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalog API");
                     config.RoutePrefix = "";
                 });
-            }
+            //}
             app.UseAuthentication();
             app.UseMvc();
 
